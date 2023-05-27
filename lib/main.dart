@@ -14,9 +14,7 @@ class BonjaurDemoApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Bonjaur Demo',
-      theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true),
+      theme: ThemeData.dark(),
       home: const HomeScreen(title: 'Bonjaur Demo'),
     );
   }

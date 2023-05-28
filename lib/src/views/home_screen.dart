@@ -1,4 +1,4 @@
-import 'package:bonjaur_demo/src/views/register_screen.dart';
+import 'package:bonjaur_demo/src/views/register_screens/register_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -78,16 +78,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      TextButton(
-                          onPressed: null, child: Text("Terms & Conditions")),
-                      Text(" | "),
-                      TextButton(
-                          onPressed: null, child: Text("Privacy Policy")),
-                    ],
-                  )
                 ],
               ),
             ),

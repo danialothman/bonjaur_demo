@@ -20,11 +20,19 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const Padding(
-                    padding: EdgeInsets.all(64.0),
-                    child: Icon(
-                      Icons.directions_bus,
-                      size: 80,
+                  Padding(
+                    padding: const EdgeInsets.all(32.0),
+                    child: Column(
+                      children: [
+                        const Icon(
+                          Icons.directions_bus,
+                          size: 80,
+                        ),
+                        Text(
+                          "Demo",
+                          style: Theme.of(context).textTheme.displaySmall,
+                        ),
+                      ],
                     ),
                   ),
                   Card(

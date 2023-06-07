@@ -28,10 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Icons.directions_bus,
                           size: 80,
                         ),
-                        Text(
-                          "Demo",
-                          style: Theme.of(context).textTheme.displaySmall,
-                        ),
+                       
                       ],
                     ),
                   ),

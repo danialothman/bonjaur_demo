@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "578206380982",
+    "project_id": "bonjaur-demo",
+    "storage_bucket": "bonjaur-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578206380982:android:e0d9c64b0be528a67f8717",
+        "android_client_info": {
+          "package_name": "com.example.bonjaur_demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578206380982-u2kc5uf5rjgve3r971l6qhq0sts752vu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhZQUcX6eAv7jW7rPjlbASUm_eJlIuScU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578206380982-u2kc5uf5rjgve3r971l6qhq0sts752vu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,5 @@
 import 'package:bonjaur_demo/src/views/register_screens/register_screen.dart';
+import 'package:bonjaur_demo/src/views/logged_in_screens/logged_in_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -28,7 +29,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           Icons.directions_bus,
                           size: 80,
                         ),
-
                       ],
                     ),
                   ),
@@ -40,18 +40,28 @@ class _HomeScreenState extends State<HomeScreen> {
                           TextFormField(
                             decoration:
                                 const InputDecoration(labelText: "Email"),
+                            enabled: false,
                           ),
                           TextFormField(
                             decoration:
                                 const InputDecoration(labelText: "Password"),
+                            enabled: false,
                           ),
                           const SizedBox(height: 16),
-                          const Row(
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Expanded(
                                 child: ElevatedButton(
-                                    onPressed: null, child: Text("Sign In")),
+                                    onPressed: () {
+                                      debugPrint("Login");
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const LoggedInScreen()));
+                                    },
+                                    child: const Text("Login")),
                               ),
                             ],
                           ),

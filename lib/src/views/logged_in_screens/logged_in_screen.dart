@@ -1,3 +1,4 @@
+import 'package:bonjaur_demo/src/views/logged_in_screens/bus_driver_logged_in_screen/bus_driver_logged_in_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoggedInScreen extends StatefulWidget {
@@ -76,6 +77,11 @@ class _LoggedInScreenState extends State<LoggedInScreen> {
                 GestureDetector(
                   onTap: () {
                     debugPrint("Go to BUS DRIVER logged in view");
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const BusDriverLoggedInScreen()));
                   },
                   child: Card(
                     child: Padding(

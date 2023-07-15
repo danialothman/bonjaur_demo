@@ -1,3 +1,7 @@
+import 'package:bonjaur_demo/src/views/logged_in_screens/bus_driver_logged_in_screen/sub_pages/activity_screen.dart';
+import 'package:bonjaur_demo/src/views/logged_in_screens/bus_driver_logged_in_screen/sub_pages/history_screen.dart';
+import 'package:bonjaur_demo/src/views/logged_in_screens/bus_driver_logged_in_screen/sub_pages/mission_screen.dart';
+import 'package:bonjaur_demo/src/views/logged_in_screens/bus_driver_logged_in_screen/sub_pages/settings_screen.dart';
 import 'package:flutter/material.dart';
 
 class BusDriverLoggedInScreen extends StatefulWidget {
@@ -11,26 +15,18 @@ class BusDriverLoggedInScreen extends StatefulWidget {
 class _BusDriverLoggedInScreenState extends State<BusDriverLoggedInScreen> {
   int _selectedIndex = 0;
 
-  static final List<Widget> _titleOptions = [
+  static final List<Widget> _appBarTitleOptions = [
     const Text("Activity"),
     const Text("Mission"),
     const Text("History"),
     const Text("Settings"),
   ];
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Activity',
-    ),
-    Text(
-      'Index 1: Mission',
-    ),
-    Text(
-      'Index 2: History',
-    ),
-    Text(
-      'Index 3: Setting',
-    ),
+  static const List<Widget> _bodyWidgetOptions = <Widget>[
+    ActivityScreen(),
+    MissionScreen(),
+    HistoryScreen(),
+    SettingsScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -43,10 +39,10 @@ class _BusDriverLoggedInScreenState extends State<BusDriverLoggedInScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: _titleOptions.elementAt(_selectedIndex),
+        title: _appBarTitleOptions.elementAt(_selectedIndex),
         automaticallyImplyLeading: false,
       ),
-      body: _widgetOptions.elementAt(_selectedIndex),
+      body: _bodyWidgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(canvasColor: Colors.black54),
         child: BottomNavigationBar(

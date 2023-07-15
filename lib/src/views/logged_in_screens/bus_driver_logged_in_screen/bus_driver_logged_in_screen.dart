@@ -9,6 +9,29 @@ class BusDriverLoggedInScreen extends StatefulWidget {
 }
 
 class _BusDriverLoggedInScreenState extends State<BusDriverLoggedInScreen> {
+  int _selectedIndex = 0;
+
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text(
+      'Index 0: Activity',
+    ),
+    Text(
+      'Index 1: Mission',
+    ),
+    Text(
+      'Index 2: History',
+    ),
+    Text(
+      'Index 3: Setting',
+    ),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,10 +39,11 @@ class _BusDriverLoggedInScreenState extends State<BusDriverLoggedInScreen> {
         title: const Text("Activity"),
         automaticallyImplyLeading: false,
       ),
-      body: const Center(child: Text("Yo")),
+      body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(canvasColor: Colors.black54),
         child: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.route), label: "Activity"),
             BottomNavigationBarItem(
@@ -30,6 +54,9 @@ class _BusDriverLoggedInScreenState extends State<BusDriverLoggedInScreen> {
                 icon: Icon(Icons.settings), label: "Settings"),
           ],
           showUnselectedLabels: true,
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.amber[800],
+          onTap: _onItemTapped,
         ),
       ),
     );

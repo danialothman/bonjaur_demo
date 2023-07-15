@@ -11,6 +11,13 @@ class BusDriverLoggedInScreen extends StatefulWidget {
 class _BusDriverLoggedInScreenState extends State<BusDriverLoggedInScreen> {
   int _selectedIndex = 0;
 
+  static final List<Widget> _titleOptions = [
+    const Text("Activity"),
+    const Text("Mission"),
+    const Text("History"),
+    const Text("Settings"),
+  ];
+
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
       'Index 0: Activity',
@@ -36,7 +43,7 @@ class _BusDriverLoggedInScreenState extends State<BusDriverLoggedInScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Activity"),
+        title: _titleOptions.elementAt(_selectedIndex),
         automaticallyImplyLeading: false,
       ),
       body: _widgetOptions.elementAt(_selectedIndex),

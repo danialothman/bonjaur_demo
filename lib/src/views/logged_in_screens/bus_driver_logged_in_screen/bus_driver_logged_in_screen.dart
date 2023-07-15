@@ -52,13 +52,22 @@ class _BusDriverLoggedInScreenState extends State<BusDriverLoggedInScreen> {
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.route), label: "Activity"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.rocket_launch), label: "Mission"),
+              icon: Icon(Icons.route),
+              label: "Activity",
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.list_alt), label: "History"),
+              icon: Icon(Icons.rocket_launch),
+              label: "Mission",
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: "Settings"),
+              icon: Icon(Icons.list_alt),
+              label: "History",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: "Settings",
+            )
           ],
           showUnselectedLabels: true,
           currentIndex: _selectedIndex,

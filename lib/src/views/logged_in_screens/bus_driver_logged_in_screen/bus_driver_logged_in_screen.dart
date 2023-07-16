@@ -40,6 +40,7 @@ class _BusDriverLoggedInScreenState extends State<BusDriverLoggedInScreen> {
     return Scaffold(
       appBar: AppBar(
         title: _appBarTitleOptions.elementAt(_selectedIndex),
+        centerTitle: true,
         automaticallyImplyLeading: false,
       ),
       body: _bodyWidgetOptions.elementAt(_selectedIndex),

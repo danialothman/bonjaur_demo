@@ -44,33 +44,30 @@ class _BusDriverLoggedInScreenState extends State<BusDriverLoggedInScreen> {
         automaticallyImplyLeading: false,
       ),
       body: _bodyWidgetOptions.elementAt(_selectedIndex),
-      bottomNavigationBar: Theme(
-        data: Theme.of(context).copyWith(canvasColor: Colors.black54),
-        child: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.route),
-              label: "Activity",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.rocket_launch),
-              label: "Mission",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.list_alt),
-              label: "History",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              label: "Settings",
-            )
-          ],
-          showUnselectedLabels: true,
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.amber[800],
-          onTap: _onItemTapped,
-        ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.route),
+            label: "Activity",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.rocket_launch),
+            label: "Mission",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.list_alt),
+            label: "History",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: "Settings",
+          )
+        ],
+        showUnselectedLabels: true,
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.amber[800],
+        onTap: _onItemTapped,
       ),
     );
   }
